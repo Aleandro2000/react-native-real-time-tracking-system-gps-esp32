@@ -1,11 +1,14 @@
-import React from "react";
-import { PaperProvider } from "react-native-paper";
-import MainScreen from "./src/screens/main.screen";
+import React from 'react';
+import {PaperProvider} from 'react-native-paper';
+import {SafeAreaView} from 'react-native';
+import MainScreen from './src/screens/main.screen';
 
 export default function App(): React.JSX.Element {
   return (
-    <PaperProvider>
-      <MainScreen />
-    </PaperProvider>
+    <SafeAreaView>
+      <PaperProvider>
+        <MainScreen />
+      </PaperProvider>
+    </SafeAreaView>
   );
 }
