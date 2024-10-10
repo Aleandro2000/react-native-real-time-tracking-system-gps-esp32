@@ -10,7 +10,7 @@ import useGpsDataStore from '../stores/gps-data.store';
 import {SMART_TRACKER_SSID, SMART_TRACKER_PASSWORD} from '@env';
 import {NetworkInfo} from 'react-native-network-info';
 
-const ConnectToESP32 = () => {
+export default function TrackingScreen(): React.JSX.Element {
   const [loading, setLoading] = useState(false);
   const setGpsData = useGpsDataStore(state => state.setGpsData);
 
@@ -102,6 +102,4 @@ const ConnectToESP32 = () => {
       )}
     </ScrollView>
   );
-};
-
-export default ConnectToESP32;
+}
